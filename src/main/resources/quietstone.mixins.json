@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.amerebagatelle.quietstone.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractBlockMixin",
+    "PistonBlockMixin",
+    "PistonExtensionBlockMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
