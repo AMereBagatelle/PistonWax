@@ -1,26 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "quietstone",
+  "id": "pistonwax",
   "version": "${version}",
-  "name": "Quietstone",
-  "description": "Allows you to make redstone components quieter.",
+  "name": "PistonWax",
+  "description": "Allows you to make pistons quieter.",
   "authors": ["AMereBagatelle"],
   "contact": {
-    "repo": "https://github.com/AMereBagatelle/Quietstone"
+    "repo": "https://github.com/AMereBagatelle/PistonWax"
   },
   "license": "LGPL-3.0",
-  "icon": "assets/quietstone/icon.png",
+  "icon": "assets/pistonwax/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": [
-      "io.github.amerebagatelle.quietstone.client.QuietstoneClient"
-    ],
     "main": [
-      "io.github.amerebagatelle.quietstone.Quietstone"
+      "io.github.amerebagatelle.pistonwax.PistonWax"
     ]
   },
   "mixins": [
-    "quietstone.mixins.json"
+    "pistonwax.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

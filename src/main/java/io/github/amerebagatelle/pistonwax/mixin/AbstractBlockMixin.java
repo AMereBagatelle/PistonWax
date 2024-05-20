@@ -1,4 +1,4 @@
-package io.github.amerebagatelle.quietstone.mixin;
+package io.github.amerebagatelle.pistonwax.mixin;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static io.github.amerebagatelle.quietstone.Quietstone.LOUD;
+import static io.github.amerebagatelle.pistonwax.PistonWax.LOUD;
 
 @Mixin(AbstractBlock.class)
 public class AbstractBlockMixin {

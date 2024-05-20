@@ -1,7 +1,8 @@
-package io.github.amerebagatelle.quietstone.mixin;
+package io.github.amerebagatelle.pistonwax.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
+import io.github.amerebagatelle.pistonwax.PistonWax;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PistonBlock;
@@ -10,10 +11,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static io.github.amerebagatelle.quietstone.Quietstone.LOUD;
+import static io.github.amerebagatelle.pistonwax.PistonWax.LOUD;
 
 @Mixin(PistonBlock.class)
 public class PistonBlockMixin {
@@ -36,6 +36,6 @@ public class PistonBlockMixin {
             index = 4
     )
     private float modifyVolume(float volume, @Local(ordinal = 0, argsOnly = true) BlockState state) {
-        return state.get(LOUD) ? volume : volume * 0.0f;
+        return state.get(LOUD) ? volume : volume * PistonWax.loudnessMultiplier;
     }
 }
