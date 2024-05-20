@@ -10,7 +10,7 @@
   },
   "license": "LGPL-3.0",
   "icon": "assets/pistonwax/icon.png",
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "io.github.amerebagatelle.pistonwax.PistonWax"
