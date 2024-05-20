@@ -25,12 +25,9 @@ public class AbstractBlockMixin {
         if(state.isOf(Blocks.PISTON) || state.isOf(Blocks.STICKY_PISTON)) {
             if(stack.isOf(Items.HONEYCOMB) && state.get(LOUD)) {
                 state = state.with(LOUD, false);
-                System.out.println(state.get(LOUD));
                 world.setBlockState(pos, state);
                 stack.decrementUnlessCreative(1, player);
                 cir.setReturnValue(ItemActionResult.SUCCESS);
-            } else {
-                cir.setReturnValue(ItemActionResult.FAIL);
             }
         }
     }
