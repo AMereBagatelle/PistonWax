@@ -11,7 +11,7 @@ import java.nio.file.Path;
 
 public class PistonWax implements ModInitializer {
     public static final BooleanProperty LOUD = BooleanProperty.of("loud");
-    public static float loudnessMultiplier = 0.1f;
+    public static float loudnessMultiplier = 0.3f;
 
     @Override
     public void onInitialize() {
